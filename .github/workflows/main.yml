@@ -1,0 +1,19 @@
+on:
+  push:
+
+jobs:
+  repo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ vars.EXAMPLE_VARIABLE }}
+
+  env:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - run: echo ${{ vars.EXAMPLE_ENVIRONMENT_VARIABLE }}
+
+  org:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ vars.EXAMPLE_ORGANIZATION_VARIABLE }}
